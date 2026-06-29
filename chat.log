@@ -13,3 +13,44 @@
 - Implementation plan: /root/gateway/docs/superpowers/plans/2026-06-29-gateway-implementation-plan.md
 - Chat log: /root/gateway/chat.log
 Plan covers 11 tasks: project scaffolding, config engine, provider adapters (Ollama, LM Studio, vLLM, OpenAI-compatible, Anthropic), harness abstraction, process manager, CLI, FastAPI router, integration tests, and final docs.
+
+[User] create a repo on github push it and continue with planing
+
+[Assistant] Created independent git repo in /root/gateway and pushed to GitHub:
+- Repo URL: https://github.com/Krutas/gateway
+- Added roadmap/future phases document: docs/superpowers/specs/2026-06-29-gateway-roadmap.md
+- Pushed commit 3ee8de4 to origin main.
+
+[User] a
+
+[Assistant] Continued planning. Added and pushed to GitHub:
+- Architecture diagrams (component, sequence, class, endpoint mapping) in docs/superpowers/diagrams/architecture.md
+- Deployment guide (local, systemd, Docker, Caddy) in docs/superpowers/ops/deployment.md
+- Security hardening checklist in docs/superpowers/ops/security-hardening.md
+- Provider quirks matrix in docs/superpowers/providers/provider-matrix.md
+- Agent harness guide in docs/superpowers/harnesses/harness-guide.md
+- Linked related docs in the main design spec.
+- Commit a14d1ee pushed to https://github.com/Krutas/gateway
+
+[User] a
+
+[Assistant] Continued planning. Added and pushed:
+- API contract: docs/superpowers/api/openapi-contract.md
+- Configuration reference: docs/superpowers/config/reference.md
+- Testing strategy: docs/superpowers/testing/strategy.md
+- GitHub Actions CI plan: docs/superpowers/ci/github-actions.md
+- Phase 4 auth + rate limiting design: docs/superpowers/specs/2026-06-29-gateway-auth-design.md
+- Linked all new docs in main design spec.
+- Commit c7ab94b pushed to https://github.com/Krutas/gateway
+
+[User] make this plan 9b model friendly
+
+[Assistant] Created a simplified, 9B-model-friendly implementation plan at docs/superpowers/plans/2026-06-29-gateway-implementation-plan-9b.md. Changes vs original plan:
+- Reduced to 8 tasks from 11
+- Flat file structure (no subfolders for providers/harnesses/server)
+- Simpler config (command string instead of harness registry)
+- Only Ollama provider in MVP (LM Studio/vLLM/Anthropic moved to Phase 2)
+- Explicit complete code blocks in every step
+- One file per task where possible
+- Clearer verification commands and expected outputs
+- Pushed commit b94a368 to https://github.com/Krutas/gateway
